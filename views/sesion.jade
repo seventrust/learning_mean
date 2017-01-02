@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='/css/index.css')
+        script(type='text/javascript', src='/jquery/dist/jquery.min.js')
+    body
+        block content
+        .container
+
+            p Bienvenido #{username}
+

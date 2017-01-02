@@ -1,0 +1,52 @@
+doctype html
+html
+  head
+    title= title
+    // Bootstrap 3.3.6
+    link(rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css")
+    //Font Awesome
+    link(rel="stylesheet" href="/font-awesome/css/font-awesome.min.css")
+    //Ionicons
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css")
+    // Theme style
+    link(rel="stylesheet" href="/AdminLTE/dist/css/AdminLTE.min.css")
+    //iCheck
+    link(rel="stylesheet" href="/AdminLTE/plugins/iCheck/square/blue.css")
+  body.hold-transition.login-page
+
+    block content
+    .container
+
+
+      div.login-box
+        div.login-logo
+          b Inicio de Sesion
+
+        div.login-box-body
+          p.login-box-msg Logueate para iniciar sesion
+          form(method="get" action="/login" enctype="multipart/form-data")
+            div.form-group
+              .has-feedback
+                input#username.form-control(type="text" placeholder="Usuario o Correo" name="username")
+                span.fa.fa-envelope.form-control-feedback
+
+            div.form-group
+              .has-feedback
+                input#password.form-control(type="password" placeholder="Contraseña" name="password")
+                span.fa.fa-lock.form-control-feedback
+            div.row
+              div.col-xs-8
+                div.checkbox.icheck
+                  label
+                    input(type="checkbox")
+                    p Recuerdame
+              div.col-xs-4
+                button.btn.btn-primary.btn-flat.btn-block(type="submit") Iniciar
+
+
+            a(href="#") Olvidé mi contraseña
+            br
+            a(href="/registrar") Registrase como nuevo usuario
+
+
+
