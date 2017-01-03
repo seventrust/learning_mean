@@ -9,7 +9,6 @@ router.get('/', function(req, res, next){
       console.log(err.stack);
     }else{
       usuarios = JSON.parse(data);
-      console.log(usuarios);
       nombre = usuarios.users.nickname;
       password = usuarios.users.password;
 
@@ -21,7 +20,8 @@ router.get('/', function(req, res, next){
       console.log(username+" "+pass);
 
       if(username == nombre && pass == password){
-        res.render('sesion', {username: username});
+
+        res.end("1");
       }
       else{
         res.end("No se encuentra lo que buscas");

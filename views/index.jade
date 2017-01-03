@@ -12,6 +12,18 @@ html
     link(rel="stylesheet" href="/AdminLTE/dist/css/AdminLTE.min.css")
     //iCheck
     link(rel="stylesheet" href="/AdminLTE/plugins/iCheck/square/blue.css")
+    //BootstrapDialog
+    link(rel="stylesheet" href="/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css")
+    //Pnotify
+    link(rel="stylesheet" href="/pnotify/dist/pnotify.css")
+
+    script(type="text/javascript" src="/jquery/dist/jquery.min.js")
+
+    script(type="text/javascript" src="/javascripts/loginFunciones.js")
+
+    script(type="text/javascript" src="/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js")
+    script(type="text/javascript" src="/pnotify/dist/pnotify.js")
+
   body.hold-transition.login-page
 
     block content
@@ -24,7 +36,6 @@ html
 
         div.login-box-body
           p.login-box-msg Logueate para iniciar sesion
-          form(method="get" action="/login" enctype="multipart/form-data")
             div.form-group
               .has-feedback
                 input#username.form-control(type="text" placeholder="Usuario o Correo" name="username")
@@ -41,12 +52,12 @@ html
                     input(type="checkbox")
                     p Recuerdame
               div.col-xs-4
-                button.btn.btn-primary.btn-flat.btn-block(type="submit") Iniciar
+                button#iniciarSesion.btn.btn-primary.btn-flat.btn-block Iniciar
 
 
             a(href="#") Olvidé mi contraseña
             br
-            a(href="/registrar") Registrase como nuevo usuario
+            a#nuevoUsuario(href="#") Registrase como nuevo usuario
 
 
 
